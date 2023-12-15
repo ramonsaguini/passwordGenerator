@@ -54,6 +54,10 @@ header {
   min-height: 100px;
 }
 
+.container-checkbox{
+  text-align: center;
+}
+
 .card-footer {
   text-align: center;
 }
