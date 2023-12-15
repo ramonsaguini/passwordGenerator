@@ -88,18 +88,29 @@ var upperCasedCharacters = [
   'Z'
 ];
 
-// // Function to prompt user for password options
-// function getPasswordOptions() {
-//   const length = document.getElementById('length').value;
-//   const lowercase = document.getElementById('lowercase').checked;
-//   const uppercase = document.getElementById('uppercase').checked;
-//   const numeric = document.getElementById('numeric').checked;
-//   const special = document.getElementById('special').checked;
+// Function to prompt user for password options
+function getPasswordOptions() {
+  const length = document.getElementById('length').value;
+  const lowercase = document.getElementById('lowercase').checked;
+  const uppercase = document.getElementById('uppercase').checked;
+  const numeric = document.getElementById('numeric').checked;
+  const special = document.getElementById('special').checked;
 
-// }
-const allChars = specialCharacters.concat(numericCharacters, lowerCasedCharacters, upperCasedCharacters)
+  var allCharacters = "";
 
-console.log(allChars)
+  //! if i select lowerCase Chart box will include a lowerCaseChrt from my var
+  if (lowercase) allCharacters += lowerCasedCharacters;
+
+  //! if i select Special Chart box will include a SpecialChrt from my var
+  if (special) allCharacters += specialCharacters;
+
+  //! if i select UpperCase CHart box will include a UpperCaseChrt from my var
+  if (uppercase) allCharacters += upperCasedCharacters;
+
+  //! if i select Numeric box will include a Number from my var
+  if (numeric) allCharacters += numericCharacters;
+}
+
 
 // // Function for getting a random element from an array
 // function getRandom(arr) {
