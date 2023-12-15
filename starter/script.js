@@ -114,6 +114,11 @@ function getPasswordOptions() {
 
 // // Function for getting a random element from an array
 // function getRandom(arr) {
+var pass = "";
+for (let i = 0; i < pass.length; i++) {
+  const randomPass = Math.floor(Math.random() * allCharacters.length);
+  pass += allCharacters.charAt(randomPass);
+}
 
 // }
 
