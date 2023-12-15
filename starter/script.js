@@ -90,9 +90,14 @@ var upperCasedCharacters = [
 
 // Function to prompt user for password options
 function getPasswordOptions() {
-
+  const length = document.getElementById('length').value;
+  const lowercase = document.getElementById('lowercase').checked;
+  const uppercase = document.getElementById('uppercase').checked;
+  const numeric = document.getElementById('numeric').checked;
+  const special = document.getElementById('special').checked;
 
 }
+console.log(getPasswordOptions);
 
 // Function for getting a random element from an array
 function getRandom(arr) {
