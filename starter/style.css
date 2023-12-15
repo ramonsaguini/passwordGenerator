@@ -31,7 +31,8 @@ header {
 }
 
 .card {
-  background-color: hsl(0, 0%, 100%);
+  background-color: blue;
+  background-image: linear-gradient(to right, rgb(247, 80, 80), green, yellow);
   border-radius: 5px;
   border-width: 1px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
@@ -46,8 +47,14 @@ header {
   content: " ";
   display: block;
   width: 100%;
-  background: #e7e9eb;
+  background: #0e58a1;
   height: 2px;
+}
+.card-header h2{
+  text-align: center;
+  font-family: 'Kalnia', serif;
+  font-size: 40px;
+  color: #c0c7cf;
 }
 
 .card-body {
@@ -56,6 +63,7 @@ header {
 
 .container-checkbox{
   text-align: center;
+  color: #c0c7cf;
 }
 
 .card-footer {
@@ -66,7 +74,7 @@ header {
   content: " ";
   display: block;
   width: 100%;
-  background: #e7e9eb;
+  background: #1871ca;
   height: 2px;
 }
 
@@ -91,10 +99,14 @@ header {
   text-align: center;
   cursor: pointer;
 }
+.btn:hover{
+  background-color: blue;
+  background-image: linear-gradient(to left, rgb(247, 80, 80), green, yellow);
+}
 
 button[disabled] {
   cursor: default;
-  background: #c0c7cf;
+  background: #0059c0;
 }
 
 .float-right {
