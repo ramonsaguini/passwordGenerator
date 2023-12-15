@@ -90,53 +90,29 @@ var upperCasedCharacters = [
 
 // Function to prompt user for password options
 function getPasswordOptions() {
-  const length = document.getElementById('length').value;
-  const lowercase = document.getElementById('lowercase').checked;
-  const uppercase = document.getElementById('uppercase').checked;
-  const numeric = document.getElementById('numeric').checked;
-  const special = document.getElementById('special').checked;
 
-  var allCharacters = "";
-
-  //! if i select lowerCase Chart box will include a lowerCaseChrt from my var
-  if (lowercase) allCharacters += lowerCasedCharacters;
-
-  //! if i select Special Chart box will include a SpecialChrt from my var
-  if (special) allCharacters += specialCharacters;
-
-  //! if i select UpperCase CHart box will include a UpperCaseChrt from my var
-  if (uppercase) allCharacters += upperCasedCharacters;
-
-  //! if i select Numeric box will include a Number from my var
-  if (numeric) allCharacters += numericCharacters;
 }
 
+// Function for getting a random element from an array
+function getRandom(arr) {
 
-// // Function for getting a random element from an array
-// function getRandom(arr) {
-var pass = "";
-for (let i = 0; i < pass.length; i++) {
-  const randomPass = Math.floor(Math.random() * allCharacters.length);
-  pass += allCharacters.charAt(randomPass);
 }
 
-// }
+// Function to generate password with user input
+function generatePassword() {
 
-// // Function to generate password with user input
-// function generatePassword() {
+}
 
-// }
+// Get references to the #generate element
+var generateBtn = document.querySelector('#generate');
 
-// // Get references to the #generate element
-// var generateBtn = document.querySelector('#generate');
+// Write password to the #password input
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector('#password');
 
-// // Write password to the #password input
-// function writePassword() {
-//   var password = generatePassword();
-//   var passwordText = document.querySelector('#password');
+  passwordText.value = password;
+}
 
-//   passwordText.value = password;
-// }
-
-// // Add event listener to generate button
-// generateBtn.addEventListener('click', writePassword);
+// Add event listener to generate button
+generateBtn.addEventListener('click', writePassword);
